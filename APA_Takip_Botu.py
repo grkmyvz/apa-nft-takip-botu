@@ -4,7 +4,7 @@ import json
 import requests
 
 # APA nftlerinin datasının bulunduğu json dosyası
-with open('db/apa_database.json') as f:
+with open('apa_database.json') as f:
     apaData = json.load(f)
 
 # Moralis uygulamasından alınan api key. https://moralis.io/
