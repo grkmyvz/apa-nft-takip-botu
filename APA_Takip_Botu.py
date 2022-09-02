@@ -28,13 +28,12 @@ def moralisRequest(query):
 while botActive:
     lastTxsRequest = moralisRequest("https://deep-index.moralis.io/api/v2/0x770a4c7f875fb63013a6db43ff6af9980fceb3b8?chain=avalanche&limit=20")["result"]
     if lastTxsRequest[0]["block_timestamp"] > lastTxTime:
-        lastTxTime = lastTxsRequest[0]["block_timestamp"]
         print("new transaction arrived. being checked")
         lastTxs = lastTxsRequest[::-1]
         for tx in lastTxs:
             txHash = tx["hash"]
             txData = moralisRequest("https://deep-index.moralis.io/api/v2/transaction/" + txHash + "?chain=avalanche")
-            if txData["logs"] != []:
+            if txData["logs"] != [] and txData["block_timestamp"] > lastTxTime:
                 if txData["to_address"] == apaContractAddress and len(txData["logs"][0]["data"]) == 706:
                     txLogDataHex = txData["logs"][0]["data"]
                     nftId = int(txLogDataHex[194:258],16)
@@ -48,6 +47,7 @@ while botActive:
                     nftId = int(txLogDataHex[194:258], 16)
                     print("Listing Canceled -- " + str(nftId) + " id APA nft is cancelled.")
                     print("-------------------------------------------------")
+    lastTxTime = lastTxsRequest[0]["block_timestamp"]
     if firstStart == True:
         print("Last data okay. Tracking apa...")
         firstStart = False
