@@ -7,6 +7,9 @@ Bot herhangi bir kontrat ile iletişime girmez. Sadece blokzincir üzerindeki ve
 Bu bot ile neler yapılabilir ?
 
 1 - Bu bot sayesinde eğer APA nftsi alacaksanız listelenen APAları hızlı bir şekilde keşfedebilip uygun nftyi almanızı kolaylaştırabilir.
+
 2 - Blokzincir üzerinde oluşturulan transactionları nasıl okuyabileceğinizi öğrenebilirsiniz.
+
 3 - Bu bot ile birlikte web3 kütüphanesi kullanarak istediğiniz APA nftsi listelendiğinde otomatik alım yapan bot yazabilirsiniz.
+
 4 - Başka bir kontrata uyarlayıp diğer nft serilerinin takibini yapabilirsiniz. ( txLogDataHex ile gelen veriler her nftde farklı olacağı için gerekli düzenlemelerin yapılması gerekir.)
