@@ -27,9 +27,9 @@ lastTxTime = ""
 
 # Mail sistemi için gerekli olan bilgiler
 #"""
-mailAddress = "" # Mail gönderecek adres
-mailAppKey = "" # Mail gönderecek adres için gerekli key
-receiverMail = "" # Maili alacak adres
+mailAddress = "sendermail@gmail.com" # Mail gönderecek adres
+mailAppKey = "MAIL_KEY" # Mail gönderecek adres için gerekli key
+receiverMail = "receivermail@gmail.com" # Maili alacak adres
 #"""
 
 def moralisRequest(query):
