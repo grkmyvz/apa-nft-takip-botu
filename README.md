@@ -19,7 +19,11 @@ Bu bot ile neler yapılabilir ?
 Mail gönderme sistemini aktif ettikten sonra mail gönderecek olan gmail hesabınız için yapmanız gereken ayarlar:
 
 1- myaccount.google.com adresine git.
+
 2- Güvenlik kısmına gir.
+
 3- 2 Adımlı Doğrulamayı aç
+
 4- Uygulama Şifrelerini aç (Uygulama = Posta , Cihaz Seçin = Windows Bilgisayar)
+
 5- Aldığınız şifreyi mailAppKey e yapıştırın.
